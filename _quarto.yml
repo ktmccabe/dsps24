@@ -1,0 +1,40 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Data Science for Political Science"
+  date: "September 2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - 02-Description.qmd
+    - 03-CausalityI.qmd
+    - 04-Visualization.qmd
+    - 05-Causalityii.qmd
+  page-navigation: true
+  downloads: pdf
+  sidebar:
+    style: docked
+    background: light
+    foreground: darkred
+
+format:
+  html:
+    theme: yeti
+    toc-title: Section Contents
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    linkcolor: red
+  pdf:
+    toc-title: Section Contents
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    linkcolor: red
+  
+
+
+editor: visual
+
