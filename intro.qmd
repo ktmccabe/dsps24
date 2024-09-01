@@ -373,7 +373,7 @@ This video provides a brief overview of opening an R script and R Markdown file 
 
 ***Assignment Exercises***
 
-1.  Create a .R script saved as "LastnameSetup1.R" (use your last name). If you use the template on Canvas, after opening in RStudio, use File -\> Save As to change to create this file nam. Within the body of this file, make sure to title it and provide your name.
+1.  Create a .R script saved as "LastnameSetup1.R" (use your last name). If you use the template on Canvas, after opening in RStudio, use File -\> Save As to change to create this file name. Within the body of this file, make sure to title it and provide your name.
     1.  Set your working directory using the Session tab in RStudio.
     2.  Do the calculation 8 + 3 - 5 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
     3.  Do the calculation 7 x 3 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
