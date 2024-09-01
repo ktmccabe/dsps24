@@ -8,12 +8,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - 02-Description.qmd
-    - 03-CausalityI.qmd
-    - 04-Visualization.qmd
-    - 05-Causalityii.qmd
   page-navigation: true
-  downloads: pdf
   sidebar:
     style: docked
     background: light

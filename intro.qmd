@@ -79,7 +79,9 @@ In other classes, you may come across Stata, SPSS, Excel, or SAS, which are prog
 
 **R and RStudio Installation**
 
-This content follows and reinforces section QSS 1.3 in our book. Additional resources are also linked below.
+IMPORTANT: Note the 2 Steps. These are 2 separate applications you must install. Installing one without the other will not work for our purposes.
+
+This content follows and reinforces section [QSS 1.3](https://assets.press.princeton.edu/chapters/s11025.pdf) in our book. Additional resources are also linked below.
 
 -   This [video](http://www.youtube.com/embed/ulIv0NiVTs4?rel=0) from Professor Christopher Bail explains why many social scientists use R and describes the R and RStudio installation process. This involves
     1.  Going to [cran](https://cran.r-project.org/), select the link that matches your operating system, and then follow the installation instructions, and
@@ -96,7 +98,7 @@ This next section provides a few notes on using R and RStudio now that you have 
 -   Creating and saving an R script (.R file)
 -   Creating, saving, and compiling an R Markdown document (.Rmd) into an html document (.html)
 
-This section highlights important concepts from QSS chapter 1.
+This section highlights important concepts from [QSS chapter 1](https://assets.press.princeton.edu/chapters/s11025.pdf).
 
 RStudio is an open-source and free program that greatly facilitates the use of R, especially for users new to programming. Once you have downloaded and installed R and RStudio, to work in R, all you need to do now is ***open RStudio*** (it will open R). It should look like this, though your version numbers will be different:
 
@@ -353,16 +355,19 @@ Once you have those installed, now, each time you want to create an R Markdown d
 
 ## Assignment 1
 
-Below is an exercise that will demonstrate you are able to use R as a calculator, create R scripts, and create and compile R Markdown files.
+Below is an exercise that will demonstrate you are able to use R as a calculator, create R scripts, and create and compile R Markdown files. You should be able to complete this assignment after reviewing the course notes from this section and QSS chapter 1.
 
 We will start walking through this assignment together during class, but you are welcome to try to do this ahead of time on your own.
 
 You will submit three documents on Canvas:
 
 -   An **R script** (.R) file with your code. Follow the best practices by titling your script and using \# comments to explain your steps. This code should be clean. I should be able to run your code to verify that the code produces the answers you write down.
--   An **.Rmd** **document** **and** a compiled RMarkdown **.html document** that you get after "knitting" the .Rmd file. This should also have a title including your name and use text or \# comments to explain your steps.
+-   An **.Rmd** **document** **and**
+-   A compiled RMarkdown **.html document** that you get after "knitting" the .Rmd file. This should also have a title including your name and use text or \# comments to explain your steps.
 
-You can create these documents from scratch using the guidance in the previous sections, or you can download and open the .R and .Rmd templates, provided on Canvas, in RStudio to get started. This video provides a brief overview of opening an R script and R Markdown file in RStudio. The notes provide additional details.
+You can create these documents from scratch using the guidance in the previous sections, or you can download and open the .R and .Rmd templates, provided on Canvas, in RStudio to get started.
+
+This video provides a brief overview of opening an R script and R Markdown file in RStudio with similar problems to those asked of you in the assignment. The notes in previous sections provide additional details.
 
 {{< video src="https://www.youtube.com/watch?v=g37_-icdPMc" >}}
 
@@ -370,12 +375,12 @@ You can create these documents from scratch using the guidance in the previous s
 
 1.  Create a .R script saved as "LastnameSetup1.R" (use your last name). Within this file, make sure to title it and provide your name.
     1.  Set your working directory, and include the file pathway (within `setwd()`) at the top of your .R script
-    2.  Do the calculation 8 + 4 - 5 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
-    3.  Do the calculation 6 x 3 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
+    2.  Do the calculation 8 + 3 - 5 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
+    3.  Do the calculation 7 x 3 in your R script. Store it as an object with an informative name. Report the answer as a comment \# below the code.
     4.  Add these two calculations together. Note: do this by adding together the objects you created, not the underlying raw calculations. Report the answer as a \# below the code.
 2.  In this problem, we will just re-format what we did in the first problem in an R Markdown format. Create a .Rmd R Markdown file saved as "LastnameSetup1.Rmd." Within this file, make sure to title it and provide your name.
-    1.  Create a Markdown heading \# Problem 2.1. Underneath this, create an R code chunk in which you do the calculation 8 + 4 - 5. Store it as an object with an informative name. Report the answer in plain language below the code chunk.
-    2.  Create a Markdown heading \# Problem 2.2. Underneath this, create an R code chunk in which you do the calculation 6 x 3 in your R script. Store it as an object with an informative name. Report the answer in plain language below the code chunk.
+    1.  Create a Markdown heading \# Problem 2.1. Underneath this, create an R code chunk in which you do the calculation 8 + 3 - 5. Store it as an object with an informative name. Report the answer in plain language below the code chunk.
+    2.  Create a Markdown heading \# Problem 2.2. Underneath this, create an R code chunk in which you do the calculation 7 x 3 in your R script. Store it as an object with an informative name. Report the answer in plain language below the code chunk.
     3.  Create a Markdown heading \# Problem 2.3. Underneath this, create an R code chunk in which you add the previous two calculations together. Note: do this by adding together the objects you created, not the underlying raw calculations. Report the answer in plain language below the code chunk.
     4.  Create a Markdown heading \# Problem 2.4. Write down how you will complete your R assignments this semester. For example, if you have a personal laptop with R and RStudio on it, you will simply write "I will use my personal laptop." If you don't have a personal computer or laptop, please indicate where on campus or off-campus you will have regular access to a computer with R/RStudio to do your work. It is ***essential*** that you have regular access to a computer so that you will not fall behind in this course.
 3.  Create a compiled .html file by "knitting" the .Rmd file into a .html document. Save the file as "LastnameSetup1.html."
