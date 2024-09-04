@@ -8,6 +8,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - 02-Description.qmd
   page-navigation: true
   sidebar:
     style: docked

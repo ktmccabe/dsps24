@@ -28,7 +28,7 @@ How do we go about a descriptive quantitative analysis?
     -   Easy! except... social science is messy. Our concepts are rich, while our measures may be very narrow or concrete.
         -   For example, GDP is one way to measure economic health, but is it the only measure?
         -   Choose measures based on validity, reliability, cost
-3.  Find multiple relevant units or "data points"
+3.  Find multiple relevant units or "data points" depending on the descriptions and comparisons you want to make
     -   E.g., Multiple years of data (e.g., U.S., from 1900 to 2020)
     -   E.g., Multiple countries from one year (e.g., U.S. to Germany to other countries)
 4.  Summarize the data to help answer the question
@@ -62,7 +62,7 @@ Our set of values is Outcome = {0,0,0,0,1,1,0,1,0,1}.
 -   Each value can be indexed by `i`, denoting the position of the value in the
 -   For example, Jesse is in position `i=10` of the vector, and his value is 1
 
-We can create vectors in R by using `c()` and assigning `<-` it to an object we will call `Outcome`.
+We can create vectors in R by using `c()` and assigning `<-` it to an object we will call `Outcome`. Note: you will use the `c()` and `<-` assignment tool all of the time in this course!
 
 ```{r}
 Outcome <- c(0,0,0,0,1,1,0,1,0,1) # Use commas to separate values
@@ -118,7 +118,9 @@ class(People)
 
 ## Functions to summarize univariate data
 
-For univariate data, often we are interested in describing the range of the values and their central tendency.
+We will use many "functions" in R, which are actions that we request R to perform with data. Functions take one or more inputs that you provide, "under the hood" perform a series of actions, and then produces one or more outputs. For example, if we supply the `mean()` function in R with a set of numbers, R will take the average of those numbers and then report the result. 
+
+For univariate data (data based on a single variable or changing characteristic), often we are interested in describing the range of the values and their central tendency. A central tendency reflects the mean or median.
 
 -   range: the minimum (`min()`) and maximum (`max()`) values
 -   mean: the average value (`mean()`)
@@ -135,7 +137,7 @@ Let's do this in R for our set of 10 values
 
 The average outcome is .4. Note: when a variable contains only 0's and 1's its mean is the proportion of 1's. 40% of people think the economy is doing well.
 
-### Using functions in R (overview)
+### Step-by-step: Using functions in R (overview)
 
 A function is an action(s) that you request R to perform on an object or set of objects. For example, we will use the `mean()` function to ask R to take the mean or "average" of a vector.
 
