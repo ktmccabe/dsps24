@@ -28,6 +28,8 @@ How do we go about a descriptive quantitative analysis?
     -   Easy! except... social science is messy. Our concepts are rich, while our measures may be very narrow or concrete.
         -   For example, GDP is one way to measure economic health, but is it the only measure?
         -   Choose measures based on validity, reliability, cost
+          + Validity: how well does the empirical measure reflect the concept it is trying to measure (too broad vs. narrow, susceptible to external biases?)
+          + Reliability: how reproducible and stable is the measure across different researchers and slight variation in sample or measures
 3.  Find multiple relevant units or "data points" depending on the descriptions and comparisons you want to make
     -   E.g., Multiple years of data (e.g., U.S., from 1900 to 2020)
     -   E.g., Multiple countries from one year (e.g., U.S. to Germany to other countries)
