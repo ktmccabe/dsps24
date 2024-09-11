@@ -105,7 +105,7 @@ What makes the evaluation of causal claims difficult, is that in the real world,
 -   For any individual, we only get to see (observe) the result from one state of the world
     -   This makes that subtraction of potential outcomes impossible.
 
-(Unless we are in [Groundhog Day](https://www.youtube.com/watch?v=5E0M6Rh9qpg)
+(Unless we are in [Groundhog Day](https://www.youtube.com/watch?v=5E0M6Rh9qpg))
 
 ## Randomized Controlled Trials
 
@@ -127,12 +127,12 @@ Randomization is essential for being able to *identify* and *isolate* the causal
 
 Without randomization, there may be several reasons why two groups differ beyond the treatment of interest.
 
--   For example, if we randomly assigned half of Rutgers seniors to watch the movie *Oppenheimer* and half to watch *Barbie* we would expect the groups to have about equal proportions of female students, average age, racial composition, majors, etc.
-    -   (If we didn't randomly assign, and just let people "select" into watching a particular movie, the groups could look very different.)
+-   For example, if we randomly assigned half of Rutgers seniors to go to a Sabrina Carpenter concert and half to go to a Bruce Springsteen concert we would expect the groups to have about equal proportions of female students, average age, racial composition, majors, etc.
+    -   (If we didn't randomly assign, and just let people "select" into watching a particular concert, the groups could look very different.)
 
-But because we randomized assignment, on average, we'd expect the two groups to be identical except for the treatment-- in this case, which movie they watched.
+But because we randomized assignment, on average, we'd expect the two groups to be identical except for the treatment-- in this case, which concert they attended.
 
--   Great news! This means any differences in the outcomes between the two groups can be attributed to the treatment. So if we wanted to see if *Top Gun Maverick* leads people to take up flying lessons, we could compare the average number of flying lessons among seniors who watched *Top Gun Maverick* compared to those who didn't, and instead watched a different movie.
+-   Great news! This means any differences in the outcomes between the two groups can be attributed to the treatment. So if we wanted to see if going to a Bruce Springsteen show leads people to hold more favorable opinions of New Jersey, we could compare the average attitudes toward NJ among seniors who attended the show vs. attended the Carpenter show.
 
 ### Experiments: How to Analyze
 
@@ -373,6 +373,8 @@ mean(femaleblack$call)
 ```
 
 ## Creating New Variables using Conditional statements
+
+*Note: We will cover each of these tools in this section, time permitting. Otherwise, we will return to it in a future section.*
 
 We can instead create a new variable in our main dataframe. Let's make a variable that takes the value 1 if a name is female and black sounding and 0, otherwise
 
