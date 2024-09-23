@@ -40,7 +40,7 @@ Some political science examples of this might include
 
 3.  Forecasting election results
 
-![](images/forecast22.png)
+![](images/forecast24.png)
 
 Other examples
 

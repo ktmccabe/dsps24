@@ -226,15 +226,20 @@ adjustedpollresults
 
 ## Application: U.S. Supreme Court
 
-*A video explainer of the loop in this section using a similar dataset that goes through 2020. We now have data going through 2021!* {{< video src="https://www.youtube.com/watch?v=Ij9YWgUQg_s" >}}
+*A video explainer of the loop in this section using a similar dataset that goes through 2020. We now have data going through 2022!* {{< video src="https://www.youtube.com/watch?v=Ij9YWgUQg_s" >}}
 
-The Court has changed a lot recently in its composition (and will continue to do so next term).
+The Court has changed a lot recently in its composition (and will continue to do so).
 
 <center>![](images/sccourt6.jpeg){width="40%"} ![](images/sccourt.jpg){width="35%"}</center>
 
 <center>![](images/sccourt5.jpeg){width="40%"}</center>
+<center>![](images/sc24.jpg){width="40%"}</center>
 
-Ideology on the U.S. Supreme Court: With Kennedy out, Kavanaugh in, did the Court have a Conservative shift? What about with the death of Ruth Bader Ginsburg and confirmation of Amy Coney Barrett?
+Ideology on the U.S. Supreme Court over the past decade: 
+
+  - With Justice Anthony Kennedy out, Kavanaugh in, did the Court have a Conservative shift? 
+  - What about with the death of Ruth Bader Ginsburg and confirmation of Amy Coney Barrett? 
+  - What about with the introduction of Justice Kentanji Brown Jackson?
 
 Many people predicted it would. See this [FiveThirtyEight article](https://fivethirtyeight.com/features/how-kavanaugh-will-change-the-supreme-court/) as an example. The graph from the article shows Kavanaugh's predicted ideology.
 
@@ -254,25 +259,25 @@ Why does the median matter? A refresher on the Court
     -   Anthony Kennedy was often the "swing" justice for a decade.
 -   With Kennedy out, the prediction was that the Court would return to similar balance as when O'Connor was the median.
 -   In 2020, Ruth Bader Ginsburg died and Amy Coney Barrett was confirmed to Court late that year, likely shifting the Court again.
--   We can continue to update the data to examine what happened. We don't yet have data on changes to the Court that have come about since Justice Ketanji Brown Jackson was confirmed following the retirement of Justice Breyer.
+-   We can continue to update the data to examine what happened. We don't yet have a lot of data on changes to the Court that have come about since Justice Ketanji Brown Jackson was confirmed following the retirement of Justice Breyer, but we can examine changes to the court median through 2022.
 
 Let's load and explore our data.
 
--   `term`: is the year of the SC (1991-2021 except for 2005),
+-   `term`: is the year of the SC (1991-2022 except for 2005),
 -   `justiceName`: contains the name of the Justice, and\
 -   `post_mn`: includes the "ideal point"-- this is the estimated ideology
 
 Martin-Quinn Scores assess ideology based on how judges "cluster" together in their voting patterns. Every Justice gets an ideology score, and this score can change each SC term (year) they are on the Court. Higher scores are more conservative justices, and lower, more liberal. More information is available at the [MQScores website](http://mqscores.lsa.umich.edu/measures.php)
 
 ```{r, include=F}
-justices <- read.csv("data/justices23.csv", stringsAsFactors = T)
+justices <- read.csv("data/justices24.csv", stringsAsFactors = T)
 ```
 
 ```{r, eval=F}
-justices <- read.csv("justices23.csv", stringsAsFactors = T)
+justices <- read.csv("justices24.csv", stringsAsFactors = T)
 
 ## alternative
-justices <- read.csv("https://raw.githubusercontent.com/ktmccabe/teachingdata/main/justices23.csv", stringsAsFactors = T)
+justices <- read.csv("https://raw.githubusercontent.com/ktmccabe/teachingdata/main/justices24.csv", stringsAsFactors = T)
 ```
 
 We are going to make the name variable a character class. This will make R treat the names as raw text rather than valued categories. This will be useful later on in the application.
@@ -298,7 +303,7 @@ plot(x =names(medians),
      main="Median of US Supreme Court over Time")
 ```
 
-We see a conservative shift at the end of the plot. However, we cannot tell whether this represents a shift within a particular justice's ideology or a shift in which justice has become the median, due perhaps, to the change in the Court's composition.
+We see a conservative shift at the end of the plot. However, we cannot tell from this specific data result whether this represents a shift within a particular justice's ideology or a shift in which justice has become the median, due perhaps, to the change in the Court's composition.
 
 ***We need to find which justice is the median!***
 

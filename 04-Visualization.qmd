@@ -157,6 +157,7 @@ We will use the `barplot()` function.
     -   E.g., we could supply it a set of means to plot, not a raw variable
 -   Many of the other arguments are aesthetics similar to those when working with boxplot.
 -   This means that barplots are pretty easy to create in R. We can supply it a short vector of any values (e.g., `valuesbar <- c(20, 30, 40, 10)`), and we could also supply it a vector of any names to label those values.
+
 ```{r, eval=F}
 ## Example
 valuesbar <- c(20, 30, 40, 10)
@@ -174,7 +175,10 @@ barplot(valuesbar,
         cex.lab = .7, 
         col="red3")
 ```
-    -   For real applications, this means we could supply a barplot with the output of a `tapply()` function, a `table()` summarizing a single variable, or a set of `mean()` values we have combined into a vector using `c()`.
+
+```         
+-   For real applications, this means we could supply a barplot with the output of a `tapply()` function, a `table()` summarizing a single variable, or a set of `mean()` values we have combined into a vector using `c()`.
+```
 
 For example, in experiments, we may use barplots to compare the mean from the treatment group(s) $\bar{Y}(1)$ to the control $\bar{Y}(0)$ on some outcome. Let's do it!
 
@@ -801,7 +805,6 @@ legend("bottomleft",  col=c("red3", "black"),
        lwd=2,
        bty="n")
 ```
-
 
 ## Visual tips and tricks
 

@@ -55,7 +55,7 @@ We want to rule out all possible confounding variables and "alternative explanat
 
 ### Example: Travis Kelce Jersey Sale and Instagram Gains
 
-Why did Travis Kelce experience an increase in social media followers?
+In fall 2023, why did Travis Kelce experience an increase in social media followers?
 
 -   Let's use the `plot()` function to visualize this
     -   Kelce saw an increase in followers on Fri, Sept 22 of 8786
@@ -583,7 +583,6 @@ treatDiff - controlDiff
 ```
 
 Here is a way to visualize this difference-in-differences. Our estimated causal effect is the difference between the observed post-1973 economy in the Basque region `mean(basqueAfter$gdpcap)` and what we assume the economy **would have been** in the absence of terrorism (the treatment) using the dotted line-- adding the control group's trajectory to the pre-1973 Basque economy `(mean(basqueBefore$gdpcap) + controlDiff)`.
-
 
 ```{r, echo=F}
 plot(c(1, 2),

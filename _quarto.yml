@@ -10,6 +10,13 @@ book:
     - intro.qmd
     - 02-Description.qmd
     - 03-CausalityI.qmd
+    - 04-Visualization.qmd
+    - 05-Causalityii.qmd
+    - 06-Loops.qmd
+    - 07-Prediction.qmd
+    - 08-Regression.qmd
+    - 09-Fairness.qmd
+    - 10-Uncertainty.qmd
   page-navigation: true
   sidebar:
     style: docked
