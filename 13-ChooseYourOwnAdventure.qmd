@@ -164,7 +164,6 @@ onlythesecolumns <- subset(uglydata,
 head(onlythesecolumns)
 ```
 
-
 ## Where to Go Next
 
 Recall that we said, four primary goals of social science include:

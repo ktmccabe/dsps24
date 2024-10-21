@@ -200,6 +200,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Uncertainty</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-TextasData.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Text as Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-Maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Mapping</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-ChooseYourOwnAdventure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Choose Your Own Adventure</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -341,19 +359,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 6           NA 162 0.319 0.405</code></pre>
 </div>
 </div>
-<p>Below we can see the first observation made: Runs scored are highly correlated with team wins</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p>Runs scored are highly correlated with team wins. What the A’s noticed is that a team’s On Base Percentage is also highly correlated with runs scored. This aligns with conventional wisdom. Players get a lot of hype when they achieve a high OBP.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/yankdodge.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">FOX</figcaption>
+</figure>
 </div>
-</div>
-<p>What the A’s noticed is that a team’s On Base Percentage is also highly correlated with runs scored. This aligns with conventional wisdom. Players get a lot of hype when they achieve a high OBP.</p>
-<p><img src="images/harper.png" class="img-fluid"></p>
-<p>Harper is one of only 11 players with at least 100 plate appearances and a postseason on base percentage plus slugging percentage greater than 1.000. - USA Today</p>
+<p>“The Yankees have an AL-best .347 on-base percentage… By now, it should be boilerplate: the easiest way to score runs is to put people on base. And the Yankees have scored enough to make it to the World Series.” - Jeff Passan, ESPN</p>
 <p>This correlation shows up in our data, too.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -365,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The regression model is <span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span>. Let’s demystify this. See also this interactive tutorial: https://ellaudet.iq.harvard.edu/linear_model.</p>
@@ -376,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li>We want to know what happens with our dependent variable <span class="math inline">\(Y\)</span> if our independent variable <span class="math inline">\(X\)</span> increases.
 <ul>
-<li>As we increase our On Base Percentage, a regression model will help us estimate how much we should expect our Runs Scored to increase (or decrease)</li>
+<li>As we increase our On Base Percentage, a regression model will help us estimate how much we should expect our Runs Scored to increase (or decrease) – aka rise over run aka the slope!</li>
 </ul></li>
 <li><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are considered “parameters” – things we don’t know but want to estimate. These two numbers will define exactly how we think <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are related (the shape of the line).</li>
 <li>No two variables are perfectly related, so we also have the <span class="math inline">\(\epsilon\)</span> term, which describes the error in the model</li>
@@ -430,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Add regression line</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col =</span> <span class="st">"purple"</span>) <span class="co"># add line</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -439,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A regression model allows us to estimate or “predict” values of our dependent variable for a given value of our independent variable.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The red dot represents our estimate (best prediction) of the number of runs scored if a team has an on base percentage of .300. In R, we can calculate this value using <code>predict()</code>.</p>
@@ -594,7 +611,7 @@ Try on your own, then expand for the solution.
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Predicting Total Donations Using Income"</span>)</span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit, <span class="at">col=</span><span class="st">"green4"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -746,7 +763,7 @@ Try on your own, then expand for the solution.
 <span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">20</span>)</span>
 <span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"purple"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -806,7 +823,7 @@ Try on your own, then expand for the solution.
 <span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>) <span class="co"># adds horizontal line</span></span>
 <span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x=</span><span class="fu">fitted</span>(fit), <span class="at">y=</span><span class="fu">resid</span>(fit), <span class="at">labels =</span> florida<span class="sc">$</span>county, <span class="at">cex=</span>.<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="08-Regression_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
+<p><img src="08-Regression_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>How does the prediction error change if we remove Palm Beach County?</p>

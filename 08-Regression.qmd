@@ -65,22 +65,11 @@ baseball <- read.csv("baseball.csv")
 head(baseball)
 ```
 
-Below we can see the first observation made: Runs scored are highly correlated with team wins
+Runs scored are highly correlated with team wins. What the A's noticed is that a team's On Base Percentage is also highly correlated with runs scored. This aligns with conventional wisdom. Players get a lot of hype when they achieve a high OBP.
 
-```{r, echo=F}
-plot(x=baseball$RS, 
-     y=baseball$W,
-     xlab = "Runs Scored",
-     ylab =  "Wins",
-     main="Wins by Runs Scored",
-     pch=20)
-```
+![FOX](images/yankdodge.png){width="70%"}
 
-What the A's noticed is that a team's On Base Percentage is also highly correlated with runs scored. This aligns with conventional wisdom. Players get a lot of hype when they achieve a high OBP.
-
-![](images/harper.png)
-
-Harper is one of only 11 players with at least 100 plate appearances and a postseason on base percentage plus slugging percentage greater than 1.000. - USA Today
+"The Yankees have an AL-best .347 on-base percentage... By now, it should be boilerplate: the easiest way to score runs is to put people on base. And the Yankees have scored enough to make it to the World Series." - Jeff Passan, ESPN
 
 This correlation shows up in our data, too.
 
@@ -116,7 +105,7 @@ The regression model is $Y = \alpha + \beta X + \epsilon$. Let's demystify this.
 -   A regression model describes the relationship between one or more independent variables $X$ (explanatory variables) and an outcome variable $Y$ (dependent variable)
     -   For example, the relationship between our independent variable, On Base Percentage, and our dependent variable, Runs Scored
 -   We want to know what happens with our dependent variable $Y$ if our independent variable $X$ increases.
-    -   As we increase our On Base Percentage, a regression model will help us estimate how much we should expect our Runs Scored to increase (or decrease)
+    -   As we increase our On Base Percentage, a regression model will help us estimate how much we should expect our Runs Scored to increase (or decrease) -- aka rise over run aka the slope!
 -   $\alpha$ and $\beta$ are considered "parameters" -- things we don't know but want to estimate. These two numbers will define exactly how we think $X$ and $Y$ are related (the shape of the line).
 -   No two variables are perfectly related, so we also have the $\epsilon$ term, which describes the error in the model
 
